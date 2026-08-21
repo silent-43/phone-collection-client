@@ -25,9 +25,8 @@ const PhonesCollection = ({ phonesPromise }) => {
       storage,
       image,
     };
-
     // save phone data to database
-    fetch("http://localhost:3000/phones", {
+    fetch("https://phone-collection-backend.onrender.com/phones", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -54,7 +53,7 @@ const PhonesCollection = ({ phonesPromise }) => {
   const handleDeleteUSer = (_id) => {
     console.log("delete a user", _id);
 
-    fetch(`http://localhost:3000/phones/${_id}`, {
+    fetch(`https://phone-collection-backend.onrender.com/phones/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -240,7 +239,7 @@ const PhonesCollection = ({ phonesPromise }) => {
                   <img
                     src={phone.image}
                     alt={phone.name}
-                    className="h-full w-full rounded-xl object-cover transition duration-500 hover:scale-105"
+                    className="h-full w-full rounded-xl object-contain transition duration-500 hover:scale-105"
                   />
                 </figure>
 

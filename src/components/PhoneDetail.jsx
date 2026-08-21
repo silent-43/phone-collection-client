@@ -1,6 +1,7 @@
 import React, { use } from "react";
 import { useLoaderData, Link, useNavigate } from "react-router";
 
+//details of phone
 const PhoneDetail = () => {
   const phone = useLoaderData();
   const navigate = useNavigate();

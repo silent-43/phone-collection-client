@@ -29,7 +29,7 @@ const UpdatePhone = () => {
     };
 
     // send data to the server
-    fetch(`http://localhost:3000/phones/${phone._id}`, {
+    fetch(`https://phone-collection-backend.onrender.com/phones/${phone._id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

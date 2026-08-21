@@ -14,12 +14,18 @@ const router = createBrowserRouter([
   },
   {
     path: "/phones/:id",
-    loader: ({ params }) => fetch(`http://localhost:3000/phones/${params.id}`),
+    loader: ({ params }) =>
+      fetch(
+        `https://phone-collection-backend.onrender.com/phones/${params.id}`,
+      ),
     Component: PhoneDetail,
   },
   {
     path: "/update/:id",
-    loader: ({ params }) => fetch(`http://localhost:3000/phones/${params.id}`),
+    loader: ({ params }) =>
+      fetch(
+        `https://phone-collection-backend.onrender.com/phones/${params.id}`,
+      ),
     Component: UpdatePhone,
   },
 ]);
